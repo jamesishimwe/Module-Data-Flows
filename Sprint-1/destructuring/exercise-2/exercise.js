@@ -70,3 +70,15 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function displayGryffindorPeople(arr)
+{
+  for(let obj of arr)
+  { if(obj.house === "Gryffindor")   {
+    let {firstName, lastName} = obj;
+    console.log(`${firstName} ${lastName}`);
+  }
+  }
+}
+
+displayGryffindorPeople(hogwarts);
