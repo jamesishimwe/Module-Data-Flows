@@ -82,3 +82,16 @@ function displayGryffindorPeople(arr)
 }
 
 displayGryffindorPeople(hogwarts);
+
+function displayTeacherWithPet(arr)
+{
+  for(let obj of arr)
+  {
+if(obj.pet != null && obj.occupation === "Teacher")
+  { let {firstName, lastName} = obj;
+console.log(`${firstName} ${lastName}`);  
+  }
+}
+}
+
+displayTeacherWithPet(hogwarts);
