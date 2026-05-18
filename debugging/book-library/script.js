@@ -32,6 +32,8 @@ function submit() {
   if (
     title.value == null ||
     title.value == "" ||
+    author.value == null ||
+    author.value == "" ||
     pages.value == null ||
     pages.value == ""
   ) {
@@ -39,6 +41,9 @@ function submit() {
     return false;
   } else {
     let book = new Book(title.value, author.value, pages.value, check.checked);
+   if(myLibrary.some(b => b.title === book.title && b.author === book.author)){    alert("This book is already in the library!");
+    return false;
+   }
     myLibrary.push(book);
     render();
   }
