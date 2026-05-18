@@ -7,5 +7,8 @@ async function fetchData() {
     })
     .catch(error=> { throw new error('Response error')});
     console.log(data);
+image = document.createElement("img");
+image.src = `${data.img}`;
+document.body.append(image);
 }
-fetchData();
+window.onload = fetchData();
