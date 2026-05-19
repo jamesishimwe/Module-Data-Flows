@@ -26,7 +26,8 @@ for(let i=1;i<saying.length;i++)
     bottomLine+='-';
 }
 // how will you account for the parameter being empty?
-
+ let cow =` ${topLine}\n<${saying}>\n ${bottomLine}\n         \\    ^__^\n          \\   (oo)\\_______\n              (__)\\       )\\/\\ \n                 ||----w |\n                 ||     ||`;
+    console.log(cow);
 }
 
 
