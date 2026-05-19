@@ -18,13 +18,19 @@ let saying = '';
 
 function cowsay(saying) {
 // how will you make the speech bubble contain the text?
-
+saying = ' '+saying+' ';
 // where will the cow picture go?
-
+for(let i=1;i<saying.length;i++)
+{
+    topLine += "_"; 
+    bottomLine+='-';
+}
 // how will you account for the parameter being empty?
 
 }
 
+
 //4. Pipe argument into cowsay function and return a cow
 
 // how will you log this to the console?
+cowsay("");
