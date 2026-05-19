@@ -29,3 +29,6 @@ const cow = (saying) => {
 
 // 4. Use readline to get a string from the terminal 
 // (with a prompt so it's clearer what we want)
+const readLineSync = require('readline-sync');
+const response = readLineSync.question('Write something:');
+cow(response);
