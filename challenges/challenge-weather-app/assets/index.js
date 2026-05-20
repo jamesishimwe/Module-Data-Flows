@@ -33,19 +33,24 @@ button.addEventListener('click', ()=>{
 });
 
 const search = document.querySelector(".btn");
+search.style.position = "absolute";
+const input = document.getElementById("search-tf");
+input.style.position = "absolute";
+input.style.left = "60px";
+search.style.width = "40px";
 search.addEventListener('click', async()=>{
-city = document.getElementById("search-tf").value;
-     info = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=944c7d6eb18c20b5227a1d6028578e05`)
+    
+let city = document.getElementById("search-tf").value;    
+let info = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=944c7d6eb18c20b5227a1d6028578e05`)
     .then(response=>response.json())
     .catch(error=>{throw new Error("Error")});
-    query = info.weather[0].description;
-     images = await fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=rFjekzFfQzet2DcZuW1kKXe8n9DHZHkp4zy2xGSbV3o`)
+   let query = info.weather[0].description;
+    let images = await fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=rFjekzFfQzet2DcZuW1kKXe8n9DHZHkp4zy2xGSbV3o`)
     .then(response=>response.json())
     .catch(error=>{throw new Error("Error")});
-     links = images.results;
-     console.log(query);
+    let links = images.results;
      document.querySelector("#conditions").innerText =info.weather[0].description + "\n" + city ; 
-
+     imageFigure.src= links[0].urls.full;
 });
 
 }
