@@ -19,7 +19,9 @@ function calculator(numbers)
     return total;
     
 }
-
+else{
+    throw new Error("Invalid input");
+}
 }
 function numbersYes(numbers)
 {   let yes = true;
