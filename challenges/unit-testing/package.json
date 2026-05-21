@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest /home/hyf/HYF/Module-Data-Flows-1/challenges/unit-testing/katas-tdd/calculator"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
