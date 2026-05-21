@@ -4,7 +4,7 @@ test("Returns zero for empty string",()=>{
 
 });
 test("Returns a number if passed without another",()=>{
-    expect(calculator("5")).toEqual(5);
+    expect(calculator("-5")).toEqual(-5);
 })
 
 test('Returns sum of two numbers',()=>{
