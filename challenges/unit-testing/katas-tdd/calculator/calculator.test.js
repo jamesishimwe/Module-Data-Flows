@@ -4,5 +4,5 @@ test("Returns zero for empty string",()=>{
 
 });
 test("Returns a number if passed without another",()=>{
-    expect("5").toEqual(5);
+    expect(calculator("5")).toEqual(5);
 })
