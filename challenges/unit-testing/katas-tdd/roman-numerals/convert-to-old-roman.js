@@ -1,6 +1,6 @@
 function convertToOldRoman(n) {
     if(n === null || n===undefined || n==='' || isNaN(Number(n))) return "";
-    if(n === "1") return "I";
+    else if(n === "1") return "I";
     else if(n === "5") return 'V';
     else if(n === "10") return 'X';
     else if(n === "50") return 'L';
@@ -12,7 +12,7 @@ function convertToOldRoman(n) {
         let numerals = {};
         while(number!=0)
         {
-            if(number>1000)
+            if(number>=1000)
                 {
                     number = number/1000;
                     numerals.M = Math.trunc(number);
