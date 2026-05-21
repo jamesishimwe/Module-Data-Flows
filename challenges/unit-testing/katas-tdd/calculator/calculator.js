@@ -10,13 +10,15 @@ function calculator(numbers)
  else if(numbers.length>3 && numbersYes(numbers)){
     let arr = numbers.split(",");
     let total = 0;
-    for(let i=0;i<numbers.length;i+=2)
-    {
-        total += parseInt(numbers[i]);
+    for(let i=0;i<arr.length;i++)
+    {   let number = parseInt(arr[i]);  
+        if(number >1000) continue;
+        total += number;
+        console.log(total);
     }
     return total;
- }
- 
+    
+}
 function numbersYes(numbers)
 {   let yes = true;
     let arr = [];
@@ -29,5 +31,5 @@ for(let i=0;i<numbers.length;i+=2)
 
 }
 }
-
+calculator("1,2,3,4,5,6,7000");
 module.exports = calculator
