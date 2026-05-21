@@ -106,9 +106,8 @@ for(let i=0;i<numeralNew.length;i++)
      
 }
     
-        console.log(numeralNew.join(''));
+        return numeralNew.join('');
     }
     
     }
-convertToNewRoman("944");
 module.exports = convertToNewRoman;
