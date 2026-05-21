@@ -62,7 +62,7 @@ function convertToOldRoman(n) {
 
 
                    
-                    numerals.I = number;
+                    numerals.I = Math.trunc(number);
                     number = 0;
                  }
 
@@ -73,7 +73,8 @@ function convertToOldRoman(n) {
         for(num in numerals)
         {
         if(num === "M"){
-            for(let i=0;i<numerals.M;i++) numeral +="M";
+            for(let i=0;i<numerals.M;i++) 
+                numeral +="M";
         } 
          if(num === "D"){
             for(let i=0;i<numerals.D;i++) numeral +="D";
