@@ -12,3 +12,8 @@ test('Upper case letter',()=>{
     expect(verifier("12345678")).toEqual("Password rejected");
     expect(verifier("12345Y78")).toEqual("Password accepted");
 })
+
+test('Password has a number',()=>{
+    expect(verifier("ABCDEFGHIJ1")).toEqual("Password accepted");
+    expect(verifier("ABCDEFGHIJ")).toEqual("Password rejected");
+});
