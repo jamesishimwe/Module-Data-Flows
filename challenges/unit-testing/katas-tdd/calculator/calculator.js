@@ -14,7 +14,6 @@ function calculator(numbers)
     {   let number = parseInt(arr[i]);  
         if(number >1000) continue;
         total += number;
-        console.log(total);
     }
     return total;
     
