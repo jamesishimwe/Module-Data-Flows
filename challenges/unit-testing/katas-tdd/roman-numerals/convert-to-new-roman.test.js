@@ -31,3 +31,12 @@ test("returns D if passed 1 as an argument", function () {
 test("returns M if passed 1 as an argument", function () {
  expect(convertToNewRoman("1000")).toEqual("M");
 });
+
+test('Test for the rest',()=>{
+  expect(convertToNewRoman("4")).toEqual("IV");
+  expect(convertToNewRoman("14")).toEqual("XIV");
+  expect(convertToNewRoman("44")).toEqual("XLIV");
+  expect(convertToNewRoman("99")).toEqual("XCIX");
+  expect(convertToNewRoman("900")).toEqual("CM");
+  expect(convertToNewRoman("944")).toEqual("CMXLIV");
+});
