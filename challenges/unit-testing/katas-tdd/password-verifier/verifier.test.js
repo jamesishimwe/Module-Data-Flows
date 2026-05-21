@@ -8,3 +8,7 @@ test('Password is not null/is null',()=>{
     expect(verifier("Password12345678")).toEqual("Password accepted");
     expect(verifier()).toEqual("Password rejected");
 })
+test('Upper case letter',()=>{
+    expect(verifier("12345678")).toEqual("Password rejected");
+    expect(verifier("12345Y78")).toEqual("Password accepted");
+})
