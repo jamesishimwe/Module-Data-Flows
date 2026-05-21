@@ -31,3 +31,11 @@ expect(convertToOldRoman("")).toEqual("");
 expect(convertToOldRoman()).toEqual("");
 expect(convertToOldRoman("1FVGBHN")).toEqual("");
 });
+test('Test for the rest',()=>{
+  expect(convertToOldRoman("1")).toEqual("I");
+  expect(convertToOldRoman("3")).toEqual("III");
+  expect(convertToOldRoman("7")).toEqual("VII");
+  expect(convertToOldRoman("15")).toEqual("XV");
+  expect(convertToOldRoman("18")).toEqual("XVIII");
+  expect(convertToOldRoman("22")).toEqual("XXII");
+});
