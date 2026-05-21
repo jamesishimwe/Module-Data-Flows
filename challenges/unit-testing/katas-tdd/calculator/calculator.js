@@ -2,7 +2,7 @@ function calculator(numbers)
 {
  if(numbers === "") return 0;
  else if(negativeIn(numbers)) throw new Error("negatives not allowed: " + numbers.split(",").filter(x => Number(x) < 0).join(","));
- else if(numbers.split(",").length === 1 && numbersYes(numbers)) return Number(numbers);
+ else if(numbers.length === 1 && numbersYes(numbers)) return Number(numbers);
  else if(numbers.split(",").length === 2 && numbersYes(numbers)){
   let number = numbers.split(",")[0];
   let secondNumber = numbers.split(",")[1];
