@@ -42,7 +42,7 @@ async function getWeather() {
   imageFigure.src = imageArray[0];
   button.addEventListener("click", () => {
     img = imageArray.indexOf(imageFigure.src) ;
-    imageFigure.src = imageArray[img + 1];
+    if(img+1 < imageArray.length)imageFigure.src = imageArray[img + 1];
   });
   const smallDiv = document.getElementById("smallImages");
   const div = document.querySelector(".controls");
