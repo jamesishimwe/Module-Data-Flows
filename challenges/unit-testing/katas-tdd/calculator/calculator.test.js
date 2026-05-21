@@ -13,3 +13,7 @@ test('Returns sum of two numbers',()=>{
  test('Returns sum of many numbers',()=>{
      expect(calculator('3,6,1,4,4,5,5,6,5,4,4,6,7')).toEqual(60);
  });
+
+test('Ignore big numbers',()=>{
+expect(calculator('2,4,1,2,4,5,6,1001')).toEqual(24);
+});
