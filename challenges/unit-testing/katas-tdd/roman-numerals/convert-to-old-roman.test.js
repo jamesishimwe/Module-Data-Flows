@@ -26,3 +26,7 @@ test("returns D if passed 1 as an argument", function () {
 test("returns M if passed 1 as an argument", function () {
  expect(convertToOldRoman("1000")).toEqual("M");
 });
+test('Test for empty,null,undefined',()=>{
+expect(convertToOldRoman("")).toEqual("");
+expect(convertToOldRoman()).toEqual("");
+});

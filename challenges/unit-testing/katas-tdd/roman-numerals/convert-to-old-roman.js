@@ -1,5 +1,5 @@
 function convertToOldRoman(n) {
-    
+    if(n === null || n===undefined || n==='') return "";
     if(n === "1") return "I";
     else if(n === "5") return 'V';
     else if(n === "10") return 'X';
