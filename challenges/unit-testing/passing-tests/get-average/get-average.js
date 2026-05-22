@@ -9,5 +9,5 @@ function average(numbers) {
     for(let num of numbers) average+=num;
     return average/numbers.length;
 }
-average([4, "-", 8, 11, "hello", "57", 0, 2]);
+
 module.exports = average;
