@@ -36,8 +36,16 @@ async function getWeather() {
   const imageFigure = document.createElement("img");
   imageFigure.id = "imageFigure";
   figure.append(imageFigure);
-  imageFigure.style.height = "100%";
-  imageFigure.style.width = "100%";
+  figure.style.border = "20px solid rgb(186, 140, 99)";
+  figure.style.backgroundColor = "silver"; 
+  
+  imageFigure.style.position = "absolute";
+  figure.style.height = "70%";
+  figure.style.width = '100%';
+  figure.style.top  ="17%";
+  
+  figure.style.position  = "absolute";
+  
   let img = 0;
   imageFigure.src = imageArray[0];
   button.addEventListener("click", () => {
