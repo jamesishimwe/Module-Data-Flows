@@ -14,8 +14,8 @@ let total = 0;
   console.log("QTY".padEnd(7) + "ITEM".padEnd(20) + "TOTAL".padStart(5));
   for(let obj of order)  {
   let{itemName,quantity,unitPricePence} = obj;
-  total = quantity * unitPricePence;
-  let row = quantity.toString().padEnd(7) + itemName.padEnd(20) + total.toString().padStart(5);
+  total = quantity * unitPricePence /100 ;
+  let row = quantity.toString().padEnd(7) + itemName.padEnd(20) + total.toFixed(2).toString().padStart(5);
   console.log(row);
 }
 console.log("\nTotal: " + total.toString());
