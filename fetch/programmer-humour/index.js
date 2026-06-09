@@ -5,7 +5,7 @@ async function xkcd() {
         if(!response.ok) throw new Error("Response error");
         return response.json();
     })
-    .catch(error=> { throw new error('Response error')});
+    .catch(error=> { throw new Error('Response error')});
     console.log(data);
 const generateImageButton = document.createElement("button");
 const divOfImage = document.createElement("div");
